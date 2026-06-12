@@ -185,6 +185,26 @@ body.lang-elv .title__sec {
 }
 body.lang-elv .email { cursor: crosshair; }
 
+/* "Buy Me a Coffee" button that replaces the shattered email button */
+.bmc-btn {
+  display: inline-flex; align-items: center; gap: 9px;
+  margin-top: clamp(22px, 4vh, 34px);
+  background: #FFDD00; color: #0a0a0a;
+  border: 2px solid #000000; border-radius: 12px;
+  padding: 9px 18px 7px;
+  font-family: "Cookie", "Space Grotesk", cursive; font-size: 26px; line-height: 1;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.bmc-btn:hover { transform: translateY(-2px); box-shadow: 5px 5px 0 #000000; }
+.bmc-btn__cup { width: 22px; height: 24px; flex-shrink: 0; }
+.bmc-btn:hover .bmc-btn__cup { animation: bmc-wiggle .5s ease; }
+.bmc-btn__text { padding-bottom: 2px; }
+@keyframes bmc-wiggle {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(-12deg); }
+  75% { transform: rotate(12deg); }
+}
+
 /* ---------- MASTER PANEL (level 1) ---------- */
 .panel {
   display: grid; grid-template-rows: 0fr;

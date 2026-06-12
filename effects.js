@@ -120,6 +120,30 @@
   var SVGNS = "http://www.w3.org/2000/svg";
   var crackSvg = null, cracks = 0, shattered = false;
 
+  // "Buy Me a Coffee" button shown in place of the shattered email (constant markup)
+  var CUP_SVG =
+    '<svg class="bmc-btn__cup" viewBox="0 0 24 24" fill="none" aria-hidden="true">' +
+    '<path d="M3.5 9.5h13v4.5a5 5 0 0 1-5 5h-3a5 5 0 0 1-5-5V9.5z" fill="#fff" stroke="#000" stroke-width="1.3"/>' +
+    '<path d="M16.5 10.5h2.3a2.4 2.4 0 0 1 0 4.8h-2.3" fill="#fff" stroke="#000" stroke-width="1.3"/>' +
+    '<path d="M6.5 3.2c0 1.1-1 1.6-1 2.7M10 3.2c0 1.1-1 1.6-1 2.7M13.5 3.2c0 1.1-1 1.6-1 2.7" stroke="#000" stroke-width="1.3" stroke-linecap="round"/>' +
+    '</svg>';
+
+  function showBmc() {
+    if (!email || document.getElementById("bmcBtn")) return;
+    var a = document.createElement("a");
+    a.id = "bmcBtn";
+    a.className = "bmc-btn";
+    a.href = "https://buymeacoffee.com/cybersecteam";
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.innerHTML = CUP_SVG + '<span class="bmc-btn__text">Coffee for our Team</span>';
+    email.parentNode.insertBefore(a, email.nextSibling);
+    email.style.display = "none";
+    a.animate(
+      [{ opacity: 0, transform: "scale(.8)" }, { opacity: 1, transform: "scale(1)" }],
+      { duration: 420, easing: "cubic-bezier(.22,1,.36,1)" });
+  }
+
   function ensureCrackSvg() {
     if (crackSvg) return crackSvg;
     email.style.position = "relative";
@@ -205,12 +229,15 @@
       ], { duration: 1150 + Math.random() * 750, delay: i * 35, easing: "cubic-bezier(.45,.05,.6,1)", fill: "forwards" });
     }
     email.style.visibility = "hidden";
+    setTimeout(showBmc, 700); // coffee button materialises where the button was
   }
 
   function resetEmail() {
     cracks = 0; shattered = false;
     if (crackSvg) crackSvg.textContent = "";
-    if (email) email.style.visibility = "";
+    if (email) { email.style.visibility = ""; email.style.display = ""; }
+    var bmc = document.getElementById("bmcBtn");
+    if (bmc) bmc.remove();
     var layer = document.getElementById("shardLayer");
     if (layer) layer.remove();
   }
