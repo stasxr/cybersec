@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>CYBERSEC CYPRUS — Security &amp; IT Outsourcing</title>
   <meta name="description" content="CYBERSEC CYPRUS — security and IT outsourcing for small and medium businesses in Cyprus: MDM (Jamf), Google Workspace, EDR, SIEM Wazuh, perimeter and web audits, security policies, phishing simulations and training." />
 
@@ -55,7 +57,7 @@
     <!-- title -->
     <p class="eyebrow" data-i18n="eyebrow">SECURITY OUTSOURCING</p>
     <h1 class="title">
-      <span class="title__pop">CYBERSEC</span>
+      <span class="title__pop">CYBER<span class="title__sec">SEC</span></span>
       <span class="title__sea">CYPRUS</span>
     </h1>
 
@@ -85,6 +87,7 @@
             <li role="none"><button role="menuitemradio" type="button" data-lang="uk" aria-checked="false">Українська</button></li>
             <li role="none"><button role="menuitemradio" type="button" data-lang="kk" aria-checked="false">Қазақша</button></li>
             <li role="none"><button role="menuitemradio" type="button" data-lang="de" aria-checked="false">Deutsch</button></li>
+            <li role="none"><button class="lang--elv" role="menuitemradio" type="button" data-lang="elv" aria-checked="false">Quenya</button></li>
           </ul>
         </div>
       </div>
@@ -108,6 +111,7 @@
   </main>
 
   <script src="i18n.js"></script>
+  <script src="effects.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

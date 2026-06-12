@@ -2,7 +2,7 @@
 (function () {
   "use strict";
 
-  var SUPPORTED = ["en", "el", "ru", "uk", "kk", "de"];
+  var SUPPORTED = ["en", "el", "ru", "uk", "kk", "de", "elv"];
   var STORE_KEY = "cybersec_lang";
 
   var lang = null;
@@ -36,35 +36,68 @@
     setText('[data-i18n="terms"]', d.terms);
     var fl = document.getElementById("footLink");
     if (fl && d.footer) {
-      fl.innerHTML = d.footer.replace("PALANIT", "<strong>PALANIT</strong>") + " ↗";
+      // build with DOM nodes (no innerHTML) so translated strings can't inject markup
+      while (fl.firstChild) fl.removeChild(fl.firstChild);
+      var parts = d.footer.split("PALANIT");
+      fl.appendChild(document.createTextNode(parts[0]));
+      var strong = document.createElement("strong");
+      strong.textContent = "PALANIT";
+      fl.appendChild(strong);
+      fl.appendChild(document.createTextNode((parts[1] || "") + " ↗"));
     }
+    updateBodyLang();
+  }
+
+  function updateBodyLang() {
+    var b = document.body;
+    b.className = b.className.replace(/\blang-\S+/g, "").replace(/\s+/g, " ").trim();
+    b.classList.add("lang-" + lang);
+    document.dispatchEvent(new CustomEvent("cybersec:lang", { detail: { lang: lang } }));
+  }
+
+  function span(cls, text) {
+    var s = document.createElement("span");
+    s.className = cls;
+    s.textContent = text;
+    return s;
   }
 
   function buildList() {
     var ul = document.getElementById("serviceList");
     if (!ul) return;
-    ul.innerHTML = "";
+    while (ul.firstChild) ul.removeChild(ul.firstChild);
     var services = dict().services || [];
 
     services.forEach(function (s, i) {
       var li = document.createElement("li");
       li.className = "svc";
 
-      li.innerHTML =
-        '<button class="svc__head" type="button" aria-expanded="false">' +
-          '<span class="svc__num">' + pad(i + 1) + "</span>" +
-          '<span class="svc__name">' + s.name + "</span>" +
-          CHEV +
-        "</button>" +
-        '<div class="svc__detail"><div class="svc__detailInner">' +
-          '<div class="svc__body">' +
-            '<span class="svc__desc">' + s.desc + "</span>" +
-            '<span class="svc__bar">|</span>' +
-            '<span class="svc__price">' + s.price + "</span>" +
-          "</div>" +
-        "</div></div>";
+      // header: number + name + (static) chevron — values set via textContent, no injection
+      var head = document.createElement("button");
+      head.className = "svc__head";
+      head.type = "button";
+      head.setAttribute("aria-expanded", "false");
+      head.appendChild(span("svc__num", pad(i + 1)));
+      head.appendChild(span("svc__name", s.name));
+      head.insertAdjacentHTML("beforeend", CHEV); // CHEV is a constant literal, no data
 
-      var head = li.querySelector(".svc__head");
+      // detail: description | price
+      var body = document.createElement("div");
+      body.className = "svc__body";
+      body.appendChild(span("svc__desc", s.desc));
+      body.appendChild(span("svc__bar", "|"));
+      body.appendChild(span("svc__price", s.price));
+
+      var inner = document.createElement("div");
+      inner.className = "svc__detailInner";
+      inner.appendChild(body);
+      var detail = document.createElement("div");
+      detail.className = "svc__detail";
+      detail.appendChild(inner);
+
+      li.appendChild(head);
+      li.appendChild(detail);
+
       head.addEventListener("click", function () {
         var open = li.classList.toggle("open");
         head.setAttribute("aria-expanded", open ? "true" : "false");

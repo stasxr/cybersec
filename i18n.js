@@ -263,5 +263,50 @@ window.I18N = {
     footer: "Teil des PALANIT-Studios",
     privacy: "Datenschutzerklärung",
     terms: "AGB"
+  },
+
+  // Ancient Elvish (Quenya-flavoured) — easter-egg tongue
+  elv: {
+    eyebrow: "Varnessë Hehtaina",
+    fieldLabel: "I Veuyéli Eldarin",
+    services: [
+      { name: "Tárë i Tegillion (MDM)",
+        desc: "Vélië tegillion linganë ar mótiéron as Jamf: axani, nurtië, palanwë-holta ar canwë yúlion.",
+        price: "Initya ho €750 · ho €6 / tegil / asta" },
+      { name: "Tárë Google Workspace",
+        desc: "Pantië ar leltië tengwion ar parmaron, panyië SSO, hossi, DLP ar menelarwa varnë (SPF / DKIM / DMARC).",
+        price: "Initya (er-lú) ho €600 · ortírië ho €120 / asta" },
+      { name: "Tárë Ñorto-tirwa (Antivirus / EDR)",
+        desc: "Cilië, panyië ar endë-vélië i varnë sarniéron ar túrion, as accarë an i ulundi.",
+        price: "Initya ho €450 · ho €5 / tegil / asta" },
+      { name: "Tulwë SIEM as Wazuh",
+        desc: "Pantië Wazuh SIEM / XDR: comië ar yuhtië lúmequentaron, axani-tecië, palantíri, sámë ar accarë.",
+        price: "Tulwë ho €1 800 · sámë ho €450 / asta" },
+      { name: "Tulwë i IT-cardas an Vinya Hossë",
+        desc: "Quanta an vinya nossë: tengwesta, tegilli, latta, lattië, minya varnessë ar ré-comië.",
+        price: "Ho €1 200 / carmë" },
+      { name: "Tirië i Etya-Rië ar Cendë Lévion",
+        desc: "Etya minasurië ar rië-ohtië: panta veuyi, lévi ar raicë-panyiéli — as parmë ar nornoli.",
+        price: "Ho €1 500" },
+      { name: "Tirië i Wé-Cardaron ar Net-haimion",
+        desc: "Ohtië-cendë wé-yulion (OWASP Top 10), API ar quénion-tëar, as envinyatië-norno.",
+        price: "Ho €1 800" },
+      { name: "Carmë ar Tulwë Axanion Ñolwëo",
+        desc: "Hostë axanion ar lendiéron varnessëo, sé ISO/IEC 27001, NIST CSF hya CIS Controls — vinyaina an carmenya.",
+        price: "Ho €1 600" },
+      { name: "Lië-yúli Hloimë (Phishing)",
+        desc: "Turwaina hloimë-ohtaron, cendë quénion-accar ar parmë as técië an nucumië i raxë.",
+        price: "Ho €10 / quén / ohta (pitya €350)" },
+      { name: "Peantië Varnessëo",
+        desc: "Peantië digital ar ñolwë-varnessëo an mótieron ar cánor — net-së hya nóressë.",
+        price: "Ho €450 / lúmë" },
+      { name: "Carmë Pentië-Lúdaron Withenë",
+        desc: "Ontië pentië-lúdaron varnessëo, vinyaina an carmenya — as cesti ar tulta-tirië.",
+        price: "Ho €900" }
+    ],
+    disclaimer: "I telpessi nar tecíli ar lelyar i carmëo palë, i nótë tegillion ar i hroa cardaso. Sina tecië nauva carna apa quetië as i ortirno vén.",
+    footer: "Restë i yenessë PALANIT",
+    privacy: "Axan Muino",
+    terms: "Axani ar Lési"
   }
 };
