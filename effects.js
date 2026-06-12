@@ -137,12 +137,17 @@
     var W = r.width, H = r.height;
     svg.setAttribute("viewBox", "0 0 " + W + " " + H);
 
-    // start on a random edge, walk roughly toward (and past) a random interior point
+    // keep every point inside the button (cracks must not leave the pill)
+    var PAD = 2.5;
+    function clampX(v) { return v < PAD ? PAD : (v > W - PAD ? W - PAD : v); }
+    function clampY(v) { return v < PAD ? PAD : (v > H - PAD ? H - PAD : v); }
+
+    // start just inside a random edge, walk toward a random interior point
     var edge = Math.floor(Math.random() * 4), x, y;
-    if (edge === 0) { x = Math.random() * W; y = 0; }
-    else if (edge === 1) { x = W; y = Math.random() * H; }
-    else if (edge === 2) { x = Math.random() * W; y = H; }
-    else { x = 0; y = Math.random() * H; }
+    if (edge === 0) { x = clampX(Math.random() * W); y = PAD; }
+    else if (edge === 1) { x = W - PAD; y = clampY(Math.random() * H); }
+    else if (edge === 2) { x = clampX(Math.random() * W); y = H - PAD; }
+    else { x = PAD; y = clampY(Math.random() * H); }
 
     var tx = W * (0.3 + Math.random() * 0.4), ty = H * (0.3 + Math.random() * 0.4);
     var dx = tx - x, dy = ty - y, dist = Math.hypot(dx, dy) || 1;
@@ -150,8 +155,8 @@
     var n = 4 + Math.floor(Math.random() * 4), step = Math.max(W, H) / (n + 1);
     var pts = [[x, y]], cx = x, cy = y;
     for (var i = 0; i < n; i++) {
-      cx += dx * step * (0.5 + Math.random() * 0.8) + (-dy) * (Math.random() - 0.5) * H * 0.7;
-      cy += dy * step * (0.5 + Math.random() * 0.8) + (dx) * (Math.random() - 0.5) * H * 0.7;
+      cx = clampX(cx + dx * step * (0.5 + Math.random() * 0.8) + (-dy) * (Math.random() - 0.5) * H * 0.7);
+      cy = clampY(cy + dy * step * (0.5 + Math.random() * 0.8) + (dx) * (Math.random() - 0.5) * H * 0.7);
       pts.push([cx, cy]);
     }
     var d = "M" + pts.map(function (p) { return p[0].toFixed(1) + " " + p[1].toFixed(1); }).join(" L");
