@@ -91,15 +91,29 @@ body.home { background: var(--ink); color: var(--paper); }
 .title__sea { color: var(--sea); font-size: clamp(54px, 14vw, 132px); }
 .title__sec { color: inherit; }
 
-/* Elvish mode: "SEC" blinks like a car turn-signal (amber, smooth fade) */
+/* Elvish mode: "SEC" blinks like a car turn-signal (amber, smooth).
+   Blink via COLOR + TEXT-SHADOW alpha, NOT element opacity — animating opacity
+   promotes the glyph to its own GPU layer and rasterises it to a texture that
+   resamples blurry on high-DPR phones. Paint-only animation stays crisp.
+   (Do NOT add translateZ / will-change / backface-visibility here — they force
+   the same texture layer and reintroduce the blur.) Glow blur tightens on mobile. */
 @keyframes turn-signal {
-  0%, 40%  { opacity: 1; }
-  50%, 90% { opacity: .1; }
-  100%     { opacity: 1; }
+  0%, 40% {
+    color: rgba(255, 179, 0, 1);
+    text-shadow: 0 0 clamp(7px, 1.6vw, 22px) rgba(255,179,0,.85), 0 0 5px rgba(255,179,0,.95);
+  }
+  50%, 90% {
+    color: rgba(255, 179, 0, .12);
+    text-shadow: 0 0 clamp(7px, 1.6vw, 22px) rgba(255,179,0,.10), 0 0 5px rgba(255,179,0,.12);
+  }
+  100% {
+    color: rgba(255, 179, 0, 1);
+    text-shadow: 0 0 clamp(7px, 1.6vw, 22px) rgba(255,179,0,.85), 0 0 5px rgba(255,179,0,.95);
+  }
 }
 body.lang-elv .title__sec {
   color: #ffb300;
-  text-shadow: 0 0 22px rgba(255,179,0,.85), 0 0 6px rgba(255,179,0,.95);
+  text-shadow: 0 0 clamp(7px, 1.6vw, 22px) rgba(255,179,0,.85), 0 0 5px rgba(255,179,0,.95);
   animation: turn-signal .95s cubic-bezier(.45,.05,.4,1) infinite;
 }
 
