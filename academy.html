@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Cyber-Safety for Kids &amp; Parents — CYBERSEC CYPRUS</title>
+  <meta name="description" content="A free digital-safety learning hub for families in Cyprus by CYBERSEC CYPRUS: lessons, posters and infographics on cyberbullying, online grooming, digital footprint and protecting children online — in English and Greek." />
+  <link rel="canonical" href="https://cybersec.cy/academy.html" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Cyber-Safety for Kids & Parents — CYBERSEC CYPRUS" />
+  <meta property="og:description" content="Free digital-safety lessons and materials for children, parents and schools in Cyprus." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cybersec.cy/academy.html" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#fbfaf4" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="academy.css" />
+</head>
+<body class="academy">
+
+  <header class="ac-top">
+    <div class="ac-top__inner">
+      <a class="ac-back" href="/">← <span data-ac="nav.back">Back to home</span></a>
+      <span class="ac-brand">CYBERSEC <b>CYPRUS</b></span>
+      <div class="ac-lang" role="group" aria-label="Language">
+        <button type="button" data-setlang="en" class="is-active">EN</button>
+        <button type="button" data-setlang="el">EL</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="ac-hero reveal in">
+      <div class="wrap">
+        <p class="ac-eyebrow" data-ac="nav.eyebrow">Free for families</p>
+        <svg class="ac-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 3.5v6c0 5.2-3.5 8.7-8 10.5-4.5-1.8-8-5.3-8-10.5v-6L12 2z"/><path d="M8.5 12l2.3 2.3L16 9"/></svg>
+        <h1 class="ac-title" data-ac="programName">Cyber-Safety for Kids &amp; Parents</h1>
+        <p class="ac-tagline" data-ac="tagline"></p>
+        <div class="ac-intro" data-ac-paras="intro"></div>
+        <div class="ac-cta-row">
+          <a class="btn-primary" href="#join" data-ac="cta.heroButton">Get the free materials</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- KIDS -->
+    <section class="ac-sec ac-sec--kids reveal" id="kids">
+      <div class="wrap">
+        <p class="ac-tag">01 · <span data-ac="kids.tag">For children</span></p>
+        <h2 class="ac-h2" data-ac="kids.title"></h2>
+        <p class="ac-lead" data-ac="kids.intro"></p>
+        <ul class="ac-modules" data-ac-modules="kids"></ul>
+      </div>
+    </section>
+
+    <!-- PARENTS -->
+    <section class="ac-sec ac-sec--parents reveal" id="parents">
+      <div class="wrap">
+        <p class="ac-tag">02 · <span data-ac="parents.tag">For parents</span></p>
+        <h2 class="ac-h2" data-ac="parents.title"></h2>
+        <p class="ac-lead" data-ac="parents.intro"></p>
+        <ul class="ac-modules" data-ac-modules="parents"></ul>
+      </div>
+    </section>
+
+    <!-- MATERIALS -->
+    <section class="ac-sec ac-sec--materials reveal" id="materials">
+      <div class="wrap">
+        <p class="ac-tag">03 · <span data-ac="materials.tag">Free downloads</span></p>
+        <h2 class="ac-h2" data-ac="materials.title"></h2>
+        <p class="ac-lead" data-ac="materials.intro"></p>
+        <div class="ac-cards" data-ac-cards="materials"></div>
+      </div>
+    </section>
+
+    <!-- RESOURCES -->
+    <section class="ac-sec ac-sec--resources reveal" id="resources">
+      <div class="wrap">
+        <p class="ac-tag">04 · <span data-ac="resources.tag">Help &amp; resources</span></p>
+        <h2 class="ac-h2" data-ac="resources.title"></h2>
+        <p class="ac-lead" data-ac="resources.intro"></p>
+        <ul class="ac-res" data-ac-resources="resources"></ul>
+      </div>
+    </section>
+
+    <!-- CTA STRIP -->
+    <section class="ac-sec ac-sec--cta reveal">
+      <div class="wrap">
+        <h2 class="ac-h2" data-ac="cta.title"></h2>
+        <p class="ac-lead" data-ac="cta.text"></p>
+        <div class="ac-cta-row"><a class="btn-primary" href="#join" data-ac="cta.button">Request the materials</a></div>
+      </div>
+    </section>
+
+    <!-- JOIN / FORM -->
+    <section class="ac-sec ac-sec--join reveal" id="join">
+      <div class="wrap">
+        <p class="ac-tag" data-ac="form.tag">Get involved</p>
+        <h2 class="ac-h2" data-ac="form.title"></h2>
+        <p class="ac-lead" data-ac="form.intro"></p>
+
+        <form class="ac-form" id="acForm" novalidate>
+          <div class="ac-field">
+            <label for="acName" data-ac="form.nameLabel"></label>
+            <input id="acName" name="name" type="text" required autocomplete="name" />
+          </div>
+          <div class="ac-field">
+            <label for="acEmail" data-ac="form.emailLabel"></label>
+            <input id="acEmail" name="email" type="email" required autocomplete="email" />
+          </div>
+          <div class="ac-field">
+            <label for="acRole" data-ac="form.roleLabel"></label>
+            <select id="acRole" name="role" data-ac-options="form.roleOptions"></select>
+          </div>
+          <div class="ac-field">
+            <label for="acMsg" data-ac="form.messageLabel"></label>
+            <textarea id="acMsg" name="message"></textarea>
+          </div>
+          <label class="ac-consent">
+            <input id="acConsent" type="checkbox" required />
+            <span><span data-ac="form.consent"></span> <a href="/privacy.html" data-ac="ui.privacyPolicy">Privacy Policy</a></span>
+          </label>
+          <button class="ac-submit" type="submit" data-ac="form.submit"></button>
+        </form>
+
+        <div class="ac-success" id="acSuccess" hidden role="status" aria-live="polite">
+          <h3 data-ac="form.successTitle"></h3>
+          <p data-ac="form.successText"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ac-foot">
+    <div class="wrap ac-foot__inner">
+      <a class="studio" id="acFootLink" href="https://palanit.com" target="_blank" rel="noopener">Part of the <strong>PALANIT</strong> studio ↗</a>
+      <nav class="ac-foot__links">
+        <a href="/privacy.html" data-ac="ui.privacy">Privacy</a>
+        <a href="/terms.html" data-ac="ui.terms">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="academy-data.js"></script>
+  <script src="academy.js"></script>
+</body>
+</html>

@@ -42,7 +42,8 @@ window.I18N = {
     disclaimer: "Prices are indicative and depend on the scope of work, the number of devices and the state of your infrastructure. A precise quote will be prepared after a consultation with our manager.",
     footer: "Part of the PALANIT studio",
     privacy: "Privacy Policy",
-    terms: "Terms & Conditions"
+    terms: "Terms & Conditions",
+    kidsBtn: "Cyber-safety for kids & parents"
   },
 
   el: {
@@ -86,7 +87,8 @@ window.I18N = {
     disclaimer: "Οι τιμές είναι ενδεικτικές και εξαρτώνται από το εύρος των εργασιών, τον αριθμό των συσκευών και την κατάσταση της υποδομής σας. Μια ακριβής προσφορά θα ετοιμαστεί μετά από συνεννόηση με τον μάνατζέρ μας.",
     footer: "Μέρος του studio PALANIT",
     privacy: "Πολιτική Απορρήτου",
-    terms: "Όροι & Προϋποθέσεις"
+    terms: "Όροι & Προϋποθέσεις",
+    kidsBtn: "Κυβερνοασφάλεια για παιδιά & γονείς"
   },
 
   ru: {
@@ -130,7 +132,8 @@ window.I18N = {
     disclaimer: "Цены ориентировочные и зависят от объёма работ, количества устройств и состояния вашей инфраструктуры. Точная смета будет подготовлена после коммуникации с нашим менеджером.",
     footer: "Часть студии PALANIT",
     privacy: "Политика конфиденциальности",
-    terms: "Правила и условия"
+    terms: "Правила и условия",
+    kidsBtn: "Кибербезопасность для детей и родителей"
   },
 
   uk: {
@@ -174,7 +177,8 @@ window.I18N = {
     disclaimer: "Ціни орієнтовні та залежать від обсягу робіт, кількості пристроїв і стану вашої інфраструктури. Точну вартість буде розраховано після консультації з нашим менеджером.",
     footer: "Частина студії PALANIT",
     privacy: "Політика конфіденційності",
-    terms: "Правила та умови"
+    terms: "Правила та умови",
+    kidsBtn: "Кібербезпека для дітей та батьків"
   },
 
   kk: {
@@ -218,7 +222,8 @@ window.I18N = {
     disclaimer: "Бағалар бағдарлық сипатта және жұмыс көлеміне, құрылғылар санына әрі инфрақұрылымыңыздың жай-күйіне байланысты. Нақты есеп-қисап біздің менеджермен кеңескеннен кейін дайындалады.",
     footer: "PALANIT студиясының бөлігі",
     privacy: "Құпиялылық саясаты",
-    terms: "Шарттар мен талаптар"
+    terms: "Шарттар мен талаптар",
+    kidsBtn: "Балалар мен ата-аналарға арналған киберқауіпсіздік"
   },
 
   de: {
@@ -262,7 +267,8 @@ window.I18N = {
     disclaimer: "Die Preise sind Richtwerte und hängen vom Leistungsumfang, der Anzahl der Geräte und dem Zustand Ihrer Infrastruktur ab. Ein genaues Angebot wird nach einem Beratungsgespräch mit unserem Manager erstellt.",
     footer: "Teil des PALANIT-Studios",
     privacy: "Datenschutzerklärung",
-    terms: "AGB"
+    terms: "AGB",
+    kidsBtn: "Cyber-Sicherheit für Kinder & Eltern"
   },
 
   // Ancient Elvish (Quenya-flavoured) — easter-egg tongue
@@ -307,6 +313,7 @@ window.I18N = {
     disclaimer: "I telpessi nar tecíli ar lelyar i carmëo palë, i nótë tegillion ar i hroa cardaso. Sina tecië nauva carna apa quetië as i ortirno vén.",
     footer: "Restë i yenessë PALANIT",
     privacy: "Axan Muino",
-    terms: "Axani ar Lési"
+    terms: "Axani ar Lési",
+    kidsBtn: "Varnessë Hínaron ar Nostaron"
   }
 };
