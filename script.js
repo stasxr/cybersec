@@ -35,6 +35,7 @@
     setText('[data-i18n="privacy"]', d.privacy);
     setText('[data-i18n="terms"]', d.terms);
     setText('[data-i18n="kidsBtn"]', d.kidsBtn);
+    setText('[data-i18n="checklistBtn"]', d.checklistBtn);
     var fl = document.getElementById("footLink");
     if (fl && d.footer) {
       // build with DOM nodes (no innerHTML) so translated strings can't inject markup

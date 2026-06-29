@@ -43,7 +43,8 @@ window.I18N = {
     footer: "Part of the PALANIT studio",
     privacy: "Privacy Policy",
     terms: "Terms & Conditions",
-    kidsBtn: "Cyber-safety for kids & parents"
+    kidsBtn: "Cyber-safety for kids & parents",
+    checklistBtn: "Personal security checklist"
   },
 
   el: {
@@ -88,7 +89,8 @@ window.I18N = {
     footer: "Μέρος του studio PALANIT",
     privacy: "Πολιτική Απορρήτου",
     terms: "Όροι & Προϋποθέσεις",
-    kidsBtn: "Κυβερνοασφάλεια για παιδιά & γονείς"
+    kidsBtn: "Κυβερνοασφάλεια για παιδιά & γονείς",
+    checklistBtn: "Λίστα προσωπικής ασφάλειας"
   },
 
   ru: {
@@ -133,7 +135,8 @@ window.I18N = {
     footer: "Часть студии PALANIT",
     privacy: "Политика конфиденциальности",
     terms: "Правила и условия",
-    kidsBtn: "Кибербезопасность для детей и родителей"
+    kidsBtn: "Кибербезопасность для детей и родителей",
+    checklistBtn: "Чек-лист личной безопасности"
   },
 
   uk: {
@@ -178,7 +181,8 @@ window.I18N = {
     footer: "Частина студії PALANIT",
     privacy: "Політика конфіденційності",
     terms: "Правила та умови",
-    kidsBtn: "Кібербезпека для дітей та батьків"
+    kidsBtn: "Кібербезпека для дітей та батьків",
+    checklistBtn: "Чек-лист особистої безпеки"
   },
 
   kk: {
@@ -223,7 +227,8 @@ window.I18N = {
     footer: "PALANIT студиясының бөлігі",
     privacy: "Құпиялылық саясаты",
     terms: "Шарттар мен талаптар",
-    kidsBtn: "Балалар мен ата-аналарға арналған киберқауіпсіздік"
+    kidsBtn: "Балалар мен ата-аналарға арналған киберқауіпсіздік",
+    checklistBtn: "Жеке қауіпсіздік тізімі"
   },
 
   de: {
@@ -268,7 +273,8 @@ window.I18N = {
     footer: "Teil des PALANIT-Studios",
     privacy: "Datenschutzerklärung",
     terms: "AGB",
-    kidsBtn: "Cyber-Sicherheit für Kinder & Eltern"
+    kidsBtn: "Cyber-Sicherheit für Kinder & Eltern",
+    checklistBtn: "Persönliche Sicherheits-Checkliste"
   },
 
   // Ancient Elvish (Quenya-flavoured) — easter-egg tongue
@@ -314,6 +320,7 @@ window.I18N = {
     footer: "Restë i yenessë PALANIT",
     privacy: "Axan Muino",
     terms: "Axani ar Lési",
-    kidsBtn: "Varnessë Hínaron ar Nostaron"
+    kidsBtn: "Varnessë Hínaron ar Nostaron",
+    checklistBtn: "Tatildë Varnessëo"
   }
 };
