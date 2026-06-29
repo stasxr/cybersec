@@ -109,8 +109,9 @@ a { color: inherit; text-decoration: none; }
 .ac-card__ico { width: 30px; height: 30px; color: var(--sea); }
 .ac-card__title { font-weight: 700; font-size: 17px; }
 .ac-card__desc { font-size: 14px; color: #444; flex: 1; }
-.ac-card__cta { margin-top: 4px; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--pop); }
-.ac-card__cta::after { content: " →"; }
+.ac-card__cta { margin-top: 4px; display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--pop); }
+.ac-card__cta .ac-arrow { width: 14px; height: 14px; transition: transform .2s ease; }
+.ac-card:hover .ac-card__cta .ac-arrow { transform: translateX(3px); }
 
 /* ---------- RESOURCES ---------- */
 .ac-res { list-style: none; margin-top: 24px; display: grid; gap: 14px; }

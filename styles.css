@@ -302,7 +302,7 @@ body.lang-elv .email { cursor: crosshair; }
 .kids-btn:hover { background: var(--lime); color: var(--ink); border-color: var(--lime); transform: translateY(-1px); }
 .kids-btn__ico { width: 16px; height: 16px; color: var(--lime); flex-shrink: 0; transition: color .2s ease; }
 .kids-btn:hover .kids-btn__ico { color: var(--ink); }
-.kids-btn__arrow { transition: transform .2s ease; }
+.kids-btn__arrow { width: 15px; height: 15px; flex-shrink: 0; transition: transform .2s ease; }
 .kids-btn:hover .kids-btn__arrow { transform: translateX(3px); }
 
 /* ---------- FOOTER ---------- */

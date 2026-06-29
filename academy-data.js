@@ -5,7 +5,7 @@ window.ACADEMY = {
     programName: "Cyber-Safe Families Cyprus",
     tagline: "Free, friendly digital-safety learning for children, parents and schools across Cyprus.",
     intro: [
-      "Cyber-Safe Families Cyprus is a free educational program from CYBERSEC CYPRUS. We turn the everyday realities of life online into clear, calm and practical lessons that any family can follow at home or in the classroom.",
+      "Cyber-Safe Families Cyprus is a free educational program from CyberSec by Palanit. We turn the everyday realities of life online into clear, calm and practical lessons that any family can follow at home or in the classroom.",
       "It is made for three groups: children and teens who are growing up online, the parents and guardians who care for them, and the teachers and schools across Cyprus who want simple, ready-to-use safety materials.",
       "Every lesson, poster and infographic is completely free to read, download and share. No accounts to buy, no jargon, no scare tactics, just useful guidance you can start using today."
     ],
@@ -89,7 +89,7 @@ window.ACADEMY = {
     programName: "Cyber-Safe Families Cyprus",
     tagline: "Δωρεάν, φιλική εκπαίδευση για την ψηφιακή ασφάλεια παιδιών, γονέων και σχολείων σε όλη την Κύπρο.",
     intro: [
-      "Το Cyber-Safe Families Cyprus είναι ένα δωρεάν εκπαιδευτικό πρόγραμμα από την CYBERSEC CYPRUS. Μετατρέπουμε την καθημερινότητα της ζωής στο διαδίκτυο σε ξεκάθαρα, ήρεμα και πρακτικά μαθήματα που μπορεί να ακολουθήσει κάθε οικογένεια στο σπίτι ή στην τάξη.",
+      "Το Cyber-Safe Families Cyprus είναι ένα δωρεάν εκπαιδευτικό πρόγραμμα από τη CyberSec by Palanit. Μετατρέπουμε την καθημερινότητα της ζωής στο διαδίκτυο σε ξεκάθαρα, ήρεμα και πρακτικά μαθήματα που μπορεί να ακολουθήσει κάθε οικογένεια στο σπίτι ή στην τάξη.",
       "Είναι φτιαγμένο για τρεις ομάδες: τα παιδιά και τους εφήβους που μεγαλώνουν στο διαδίκτυο, τους γονείς και κηδεμόνες που τα φροντίζουν, και τους εκπαιδευτικούς και τα σχολεία σε όλη την Κύπρο που θέλουν απλό, έτοιμο προς χρήση υλικό ασφάλειας.",
       "Κάθε μάθημα, αφίσα και ενημερωτικό γράφημα είναι εντελώς δωρεάν για ανάγνωση, λήψη και κοινοποίηση. Χωρίς λογαριασμούς προς αγορά, χωρίς δυσνόητη ορολογία, χωρίς τρομολαγνεία — απλώς χρήσιμη καθοδήγηση που μπορείτε να αρχίσετε να χρησιμοποιείτε σήμερα."
     ],

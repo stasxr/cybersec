@@ -23,6 +23,7 @@
 
   var CHEV = '<svg class="ac-mod__chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>';
   var DL = '<svg class="ac-card__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>';
+  var ARROW = '<svg class="ac-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>';
 
   /* linkify URLs and emails inside a contact string (safe DOM nodes only) */
   function linkify(text) {
@@ -74,7 +75,9 @@
       a.insertAdjacentHTML("beforeend", DL);
       a.appendChild(span("ac-card__title", it.title));
       a.appendChild(span("ac-card__desc", it.desc));
-      a.appendChild(span("ac-card__cta", d.cta.button));
+      var cta = span("ac-card__cta", d.cta.button);
+      cta.insertAdjacentHTML("beforeend", ARROW);
+      a.appendChild(cta);
       container.appendChild(a);
     });
   }
