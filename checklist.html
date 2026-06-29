@@ -66,10 +66,8 @@
       </div>
     </header>
 
-    <div class="app__progress">
-      <div class="app__bar"><span id="progFill"></span></div>
-      <div class="app__stats" id="progStats"></div>
-    </div>
+    <div class="gauges" id="gauges" aria-label="Progress by priority"></div>
+    <p class="overall" id="overall"></p>
 
     <div class="app__controls">
       <div class="filters" id="filters" role="group" aria-label="Filter by priority">
@@ -82,7 +80,7 @@
       <button type="button" id="resetBtn" class="reset">Reset</button>
     </div>
 
-    <main class="app__sections" id="sections"></main>
+    <main class="sec-grid" id="grid"></main>
 
     <footer class="app__foot">
       <p>Checklist content adapted from <a href="https://github.com/Lissy93/personal-security-checklist" target="_blank" rel="noopener">Lissy93/personal-security-checklist</a> (MIT License).</p>
